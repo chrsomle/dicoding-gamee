@@ -22,7 +22,10 @@ struct DetailView: View {
 			ProgressView()
 		}
 	}
+}
 
+// MARK: View Builders
+extension DetailView {
 	@ViewBuilder
 	func content(game: GameDetail) -> some View {
 		ScrollView(.vertical, showsIndicators: false) {
@@ -75,9 +78,7 @@ struct DetailView: View {
 		.background(AppColor.background.edgesIgnoringSafeArea(.all))
 		.navigationBarTitleDisplayMode(.inline)
 	}
-}
 
-extension DetailView {
 	@ViewBuilder func section(title: String, content: String) -> some View {
 		VStack(alignment: .leading, spacing: 4) {
 			sectionHeader(title: title)

@@ -55,7 +55,10 @@ struct GameRow: View {
 		)
 		.cornerRadius(12)
 	}
+}
 
+// MARK: View Builders
+extension GameRow {
 	@ViewBuilder func genreView(title: String) -> some View {
 		Text(title)
 			.font(.subheadline)

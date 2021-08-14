@@ -43,6 +43,7 @@ struct AboutView: View {
     }
 }
 
+// MARK: View Builders
 extension AboutView {
 	@ViewBuilder func sectionHeader(title: String) -> some View {
 		Text(title)
