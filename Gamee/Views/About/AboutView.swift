@@ -34,7 +34,7 @@ struct AboutView: View {
 				Spacer()
 			}
 			.padding()
-			.background(AppColor.primary)
+			.background(AppColor.background)
 			.cornerRadius(12)
 			Spacer()
 		}

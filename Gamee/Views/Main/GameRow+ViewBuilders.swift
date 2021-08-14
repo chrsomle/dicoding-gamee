@@ -13,7 +13,7 @@ extension GameRow {
 			.font(.subheadline)
 			.padding(.horizontal)
 			.padding(.vertical, 4)
-			.background(Color.secondary)
+			.background(AppColor.secondary)
 			.cornerRadius(6)
 	}
 

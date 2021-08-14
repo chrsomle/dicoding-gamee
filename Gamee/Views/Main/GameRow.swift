@@ -42,8 +42,8 @@ struct GameRow: View {
 				}.frame(height: 28)
 			}
 			.padding()
-			.foregroundColor(AppColor.primary)
-			.background(Color.primary)
+			.foregroundColor(AppColor.foreground)
+			.background(AppColor.background)
 		}
 		.background(
 			AsyncImage(url: URL(string: game.backgroundImage)!) {

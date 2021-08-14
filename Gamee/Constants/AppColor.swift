@@ -8,5 +8,7 @@
 import SwiftUI
 
 struct AppColor {
-	static let primary = Color("Primary")
+	static let foreground = Color("Foreground")
+	static let background = Color("Background")
+	static let secondary = Color("Secondary")
 }
