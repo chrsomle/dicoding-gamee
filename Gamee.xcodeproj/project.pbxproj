@@ -18,6 +18,7 @@
 		83AAF3EF26C7D48F0024A08C /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AAF3EE26C7D48F0024A08C /* AppColor.swift */; };
 		83AAF3F226C7DD780024A08C /* GameRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AAF3F126C7DD780024A08C /* GameRow.swift */; };
 		83AAF3F726C7DE0F0024A08C /* GameRow+ViewBuilders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AAF3F626C7DE0F0024A08C /* GameRow+ViewBuilders.swift */; };
+		83AAF3FC26C7E21B0024A08C /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AAF3FB26C7E21B0024A08C /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		83AAF3EE26C7D48F0024A08C /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		83AAF3F126C7DD780024A08C /* GameRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRow.swift; sourceTree = "<group>"; };
 		83AAF3F626C7DE0F0024A08C /* GameRow+ViewBuilders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameRow+ViewBuilders.swift"; sourceTree = "<group>"; };
+		83AAF3FB26C7E21B0024A08C /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +68,10 @@
 		83AAF38826C6ACF30024A08C /* Gamee */ = {
 			isa = PBXGroup;
 			children = (
-				83AAF3ED26C7D4840024A08C /* Constants */,
 				83AAF3E726C7C2850024A08C /* Base */,
 				83AAF39826C6ADB40024A08C /* Models */,
 				83AAF3E626C7C26B0024A08C /* Views */,
+				83AAF3ED26C7D4840024A08C /* Constants */,
 				83AAF3E826C7C2910024A08C /* Configs */,
 				83AAF3E926C7C29D0024A08C /* Resources */,
 			);
@@ -90,6 +92,7 @@
 		83AAF3E626C7C26B0024A08C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				83AAF3FA26C7E2110024A08C /* About */,
 				83AAF3F026C7DD6A0024A08C /* Main */,
 			);
 			path = Views;
@@ -144,6 +147,14 @@
 				83AAF3F626C7DE0F0024A08C /* GameRow+ViewBuilders.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		83AAF3FA26C7E2110024A08C /* About */ = {
+			isa = PBXGroup;
+			children = (
+				83AAF3FB26C7E21B0024A08C /* AboutView.swift */,
+			);
+			path = About;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +252,7 @@
 				83AAF3E526C7C2650024A08C /* MainView.swift in Sources */,
 				83AAF3F226C7DD780024A08C /* GameRow.swift in Sources */,
 				83AAF3F726C7DE0F0024A08C /* GameRow+ViewBuilders.swift in Sources */,
+				83AAF3FC26C7E21B0024A08C /* AboutView.swift in Sources */,
 				83AAF3DA26C7BB550024A08C /* Platform.swift in Sources */,
 				83AAF3EF26C7D48F0024A08C /* AppColor.swift in Sources */,
 				83AAF3E226C7BB550024A08C /* Genre.swift in Sources */,

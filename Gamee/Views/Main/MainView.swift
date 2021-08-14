@@ -29,9 +29,21 @@ struct MainView: View {
 
 	var body: some View {
 		NavigationView {
-			List([game]) { game in
-				GeometryReader { metrics in
-					GameRow(game: game, metrics: metrics)
+			ScrollView {
+				LazyVStack {
+					ForEach([game]) { game in
+						GeometryReader { metrics in
+							GameRow(game: game, metrics: metrics)
+						}
+						.padding(.bottom)
+						.padding(.horizontal)
+					}
+				}
+			}
+			.navigationTitle("Game List")
+			.toolbar {
+				NavigationLink(destination: AboutView()) {
+					Image(systemName: "info.circle")
 				}
 			}
 		}
