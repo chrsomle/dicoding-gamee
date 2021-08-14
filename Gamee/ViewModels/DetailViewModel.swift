@@ -1,22 +1,23 @@
 //
-//  MainViewModel.swift
+//  DetailViewModel.swift
 //  Gamee
 //
-//  Created by Christianto Budisaputra on 14/08/21.
+//  Created by Christianto Budisaputra on 15/08/21.
 //
 
 import Foundation
 
-class MainViewModel: ObservableObject {
-	@Published var games = [Game]()
+class DetailViewModel: ObservableObject {
+	@Published var game: GameDetail?
 
-	private let baseUrl = "https://api.rawg.io/api/games"
+	private let baseUrl: String
 
-	init() {
-		getGames()
+	init(gameID: Int) {
+		baseUrl = "https://api.rawg.io/api/games/\(gameID)"
+		getGameDetail()
 	}
 
-	func getGames() {
+	func getGameDetail() {
 		var urlComponents = URLComponents(string: baseUrl)!
 
 		urlComponents.queryItems = [Networking.apiKey]
@@ -25,11 +26,9 @@ class MainViewModel: ObservableObject {
 			guard let res = res as? HTTPURLResponse, let data = data else { return }
 			if res.statusCode == 200 {
 				do {
-					let decoder = JSONDecoder()
-					decoder.keyDecodingStrategy = .convertFromSnakeCase
-					let result = try decoder.decode(APIResponse.self, from: data)
+					let result = try JSONDecoder().decode(GameDetail.self, from: data)
 					DispatchQueue.main.async {
-						self.games = result.results
+						self.game = result
 					}
 				} catch {
 					print("Parsing data failed:", error.localizedDescription)
@@ -38,11 +37,5 @@ class MainViewModel: ObservableObject {
 				print("Error: \(data), HTTP Status: \(res.statusCode)")
 			}
 		}.resume()
-	}
-}
-
-extension MainViewModel {
-	struct APIResponse: Decodable {
-		let results: [Game]
 	}
 }

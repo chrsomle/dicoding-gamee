@@ -11,27 +11,33 @@ struct MainView: View {
 	@StateObject var viewModel = MainViewModel()
 
 	var body: some View {
-
 		NavigationView {
 			Group {
 				if viewModel.games.isEmpty {
 					ProgressView()
 				} else {
-					ScrollView {
-						LazyVStack {
-							ForEach(viewModel.games, id: \.id) { game in
-								GameRow(game: game)
-									.padding(.bottom, 24)
-									.padding(.horizontal)
-							}
-						}
-					}
+					content
 				}
 			}
 			.navigationTitle("Game List")
 			.toolbar {
 				NavigationLink(destination: AboutView()) {
 					Image(systemName: "info.circle")
+				}
+			}
+		}
+	}
+
+	private var content: some View {
+		ScrollView {
+			LazyVStack {
+				ForEach(viewModel.games, id: \.id) { game in
+					NavigationLink(
+						destination: DetailView(gameID: game.id)) {
+						GameRow(game: game)
+							.padding(.bottom, 24)
+							.padding(.horizontal)
+					}
 				}
 			}
 		}
