@@ -8,35 +8,23 @@
 import SwiftUI
 
 struct MainView: View {
-	let game = Game(
-		id: 1,
-		name: "Grand Theft Auto V",
-		released: "2013-09-17",
-		backgroundImage: "gta",
-		rating: 4.48,
-		ratingTop: 5,
-		platforms: [
-			Platform(id: 1, name: "PC"),
-			Platform(id: 1, name: "XBox"),
-			Platform(id: 1, name: "PlayStation")
-		],
-		genres: [
-			Genre(id: 1, name: "Action"),
-			Genre(id: 2, name: "Adventure")
-		],
-		screenshots: []
-	)
+	@StateObject var viewModel = MainViewModel()
 
 	var body: some View {
+
 		NavigationView {
-			ScrollView {
-				LazyVStack {
-					ForEach([game]) { game in
-						GeometryReader { metrics in
-							GameRow(game: game, metrics: metrics)
+			Group {
+				if viewModel.games.isEmpty {
+					ProgressView()
+				} else {
+					ScrollView {
+						LazyVStack {
+							ForEach(viewModel.games, id: \.id) { game in
+								GameRow(game: game)
+									.padding(.bottom, 24)
+									.padding(.horizontal)
+							}
 						}
-						.padding(.bottom)
-						.padding(.horizontal)
 					}
 				}
 			}
