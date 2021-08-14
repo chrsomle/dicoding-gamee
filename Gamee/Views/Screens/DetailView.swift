@@ -49,6 +49,12 @@ struct DetailView: View {
 
 				Divider()
 
+				VStack(alignment: .leading, spacing: 4) {
+					sectionHeader(title: "Rating")
+					RatingView(rating: game.rating, ratingTop: game.ratingTop)
+						.foregroundColor(.accentColor)
+				}
+
 				section(title: "Platforms", content: game.platformList)
 
 				section(title: "Genres", content: game.genreList)

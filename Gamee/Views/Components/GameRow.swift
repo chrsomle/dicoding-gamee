@@ -28,8 +28,9 @@ struct GameRow: View {
 						.foregroundColor(.gray)
 
 					// MARK: Rating
-					ratingView(rating: game.rating, ratingTop: game.ratingTop)
+					RatingView(rating: game.rating, ratingTop: game.ratingTop)
 						.font(.caption)
+						.foregroundColor(.accentColor)
 				}
 
 				// MARK: Genres
@@ -53,5 +54,14 @@ struct GameRow: View {
 			}
 		)
 		.cornerRadius(12)
+	}
+
+	@ViewBuilder func genreView(title: String) -> some View {
+		Text(title)
+			.font(.subheadline)
+			.padding(.horizontal)
+			.padding(.vertical, 4)
+			.background(AppColor.secondary)
+			.cornerRadius(6)
 	}
 }
