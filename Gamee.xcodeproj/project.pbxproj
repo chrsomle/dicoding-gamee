@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83820D4E26C825940053E888 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83820D4D26C825940053E888 /* ImageCache.swift */; };
 		83AAF38A26C6ACF30024A08C /* GameeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AAF38926C6ACF30024A08C /* GameeApp.swift */; };
 		83AAF38E26C6ACF40024A08C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83AAF38D26C6ACF40024A08C /* Assets.xcassets */; };
 		83AAF39126C6ACF40024A08C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83AAF39026C6ACF40024A08C /* Preview Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83820D4D26C825940053E888 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		83AAF38626C6ACF30024A08C /* Gamee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gamee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83AAF38926C6ACF30024A08C /* GameeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameeApp.swift; sourceTree = "<group>"; };
 		83AAF38D26C6ACF40024A08C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				83AAF40526C811E80024A08C /* ImageLoader.swift */,
+				83820D4D26C825940053E888 /* ImageCache.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				83AAF3F226C7DD780024A08C /* GameRow.swift in Sources */,
 				83AAF3F726C7DE0F0024A08C /* GameRow+ViewBuilders.swift in Sources */,
 				83AAF3FC26C7E21B0024A08C /* AboutView.swift in Sources */,
+				83820D4E26C825940053E888 /* ImageCache.swift in Sources */,
 				83AAF3EF26C7D48F0024A08C /* AppColor.swift in Sources */,
 				83AAF3E226C7BB550024A08C /* Genre.swift in Sources */,
 				83AAF38A26C6ACF30024A08C /* GameeApp.swift in Sources */,
