@@ -33,13 +33,14 @@ struct GameRow: View {
 				}
 
 				// MARK: Genres
-				ScrollView(.horizontal) {
+				ScrollView(.horizontal, showsIndicators: false) {
 					LazyHStack(spacing: 12) {
 						ForEach(game.genres, id: \.id) { genre in
 							genreView(title: genre.name)
 						}
 					}
-				}.frame(height: 28)
+				}
+				.frame(height: 28)
 			}
 			.padding()
 			.foregroundColor(AppColor.foreground)
