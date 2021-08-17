@@ -42,30 +42,20 @@ extension GameDetail {
 	}
 
 	var releaseDate: String {
-		let dateFormatterGet = DateFormatter()
-		dateFormatterGet.dateFormat = "yyyy-MM-dd"
+		let dateHelper = DateHelper(
+			inputFormat: "yyyy-MM-dd",
+			outputFormat: "MMM dd, yyyy"
+		)
 
-		let dateFormatterPrint = DateFormatter()
-		dateFormatterPrint.dateFormat = "MMM dd, yyyy"
-
-		if let date = dateFormatterGet.date(from: released) {
-			return dateFormatterPrint.string(from: date)
-		} else {
-			return released
-		}
+		return dateHelper.convert(date: released)
 	}
 
 	var latestUpdate: String {
-		let dateFormatterGet = DateFormatter()
-		dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+		let dateHelper = DateHelper(
+			inputFormat: "yyyy-MM-dd'T'HH:mm:ss",
+			outputFormat: "EEEE, MMM dd, yyyy"
+		)
 
-		let dateFormatterPrint = DateFormatter()
-		dateFormatterPrint.dateFormat = "EEEE, MMM dd, yyyy"
-
-		if let date = dateFormatterGet.date(from: updated) {
-			return dateFormatterPrint.string(from: date)
-		} else {
-			return updated
-		}
+		return dateHelper.convert(date: released)
 	}
 }

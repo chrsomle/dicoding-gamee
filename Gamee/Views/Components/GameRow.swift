@@ -22,15 +22,18 @@ struct GameRow: View {
 
 				HStack {
 					// MARK: Release Year
-					Text("\(game.releaseYear)   • ")
+					Text("\(game.releaseDate)  •")
 						.font(.headline)
 						.bold()
 						.foregroundColor(.gray)
 
 					// MARK: Rating
-					RatingView(rating: game.rating, ratingTop: game.ratingTop)
-						.font(.caption)
-						.foregroundColor(.accentColor)
+					HStack {
+						Text(game.ratingRatio).bold()
+						RatingView(rating: game.rating, ratingTop: game.ratingTop)
+					}
+					.font(.caption)
+					.foregroundColor(.accentColor)
 				}
 
 				// MARK: Genres

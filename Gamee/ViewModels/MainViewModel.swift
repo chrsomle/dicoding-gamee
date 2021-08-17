@@ -19,7 +19,9 @@ class MainViewModel: ObservableObject {
 	func getGames() {
 		var urlComponents = URLComponents(string: baseUrl)!
 
-		urlComponents.queryItems = [Networking.apiKey]
+		urlComponents.queryItems = [
+			URLQueryItem(name: "key", value: Networking.apiKey)
+		]
 
 		URLSession.shared.dataTask(with: urlComponents.url!) { data, res, _ in
 			guard let res = res as? HTTPURLResponse, let data = data else { return }
@@ -38,11 +40,5 @@ class MainViewModel: ObservableObject {
 				print("Error: \(data), HTTP Status: \(res.statusCode)")
 			}
 		}.resume()
-	}
-}
-
-extension MainViewModel {
-	struct APIResponse: Decodable {
-		let results: [Game]
 	}
 }

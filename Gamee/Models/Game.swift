@@ -18,7 +18,18 @@ struct Game: Decodable, Identifiable {
 }
 
 extension Game {
-	var releaseYear: String {
-		released.prefix(4).description
+	var ratingRatio: String {
+		let rating = self.rating > Double(ratingTop) ? Double(ratingTop) : self.rating
+		let ratingBottom = String(format: "%.1f", rating)
+		return "\(ratingBottom) / \(ratingTop)"
+	}
+	
+	var releaseDate: String {
+		let dateHelper = DateHelper(
+			inputFormat: "yyyy-MM-dd",
+			outputFormat: "MMM dd, yyyy"
+		)
+
+		return dateHelper.convert(date: released)
 	}
 }

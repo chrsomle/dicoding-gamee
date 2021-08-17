@@ -8,5 +8,19 @@
 import Foundation
 
 struct Networking {
-	static let apiKey = URLQueryItem(name: "key", value: "b4e48f63dd9d4ee08deba27e34e51d93")
+	static var apiKey: String {
+		get {
+			guard let filePath = Bundle.main.path(forResource: "rawg.io-Info", ofType: "plist") else {
+				fatalError("Couldn't find file 'rawg.io-Info.plist'.")
+			}
+
+			let plist = NSDictionary(contentsOfFile: filePath)
+
+			guard let value = plist?.object(forKey: "API_KEY") as? String else {
+				fatalError("Couldn't find key 'API_KEY' in 'rawg.io-Info.plist'.")
+			}
+
+			return value
+		}
+	}
 }

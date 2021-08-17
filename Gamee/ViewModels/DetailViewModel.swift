@@ -20,7 +20,9 @@ class DetailViewModel: ObservableObject {
 	func getGameDetail() {
 		var urlComponents = URLComponents(string: baseUrl)!
 
-		urlComponents.queryItems = [Networking.apiKey]
+		urlComponents.queryItems = [
+			URLQueryItem(name: "key", value: Networking.apiKey)
+		]
 
 		URLSession.shared.dataTask(with: urlComponents.url!) { data, res, _ in
 			guard let res = res as? HTTPURLResponse, let data = data else { return }
