@@ -52,10 +52,14 @@ struct GameRow: View {
 			.background(AppColor.background)
 		}
 		.background(
-			AsyncImage(url: URL(string: game.backgroundImage)!) {
-				ProgressView()
-					.offset(y: -60)
-			}
+			WebImage(url: URL(string: game.backgroundImage))
+				.resizable()
+				.indicator(content: { _, _ in
+					ProgressView()
+						.offset(y: -60)
+				})
+				.transition(.fade(duration: 0.5))
+				.scaledToFill()
 		)
 		.cornerRadius(12)
 	}

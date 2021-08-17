@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct DetailView: View {
 
@@ -30,14 +31,18 @@ extension DetailView {
 	func content(game: GameDetail) -> some View {
 		ScrollView(.vertical, showsIndicators: false) {
 			GeometryReader { metrics in
-				AsyncImage(url: URL(string: game.backgroundImage)!) {
-					ProgressView()
-				}
-				.offset(y: -metrics.frame(in: .global).minY + 48)
-				.frame(
-					width: UIScreen.main.bounds.width,
-					height: metrics.frame(in: .global).minY > 0 ? metrics.frame(in: .global).minY + 360 : 360
-				)
+				WebImage(url: URL(string: game.backgroundImage))
+					.resizable()
+					.indicator(content: { _, _ in
+						ProgressView()
+					})
+					.transition(.fade(duration: 0.5))
+					.scaledToFill()
+					.offset(y: -metrics.frame(in: .global).minY + 48)
+					.frame(
+						width: UIScreen.main.bounds.width,
+						height: metrics.frame(in: .global).minY > 0 ? metrics.frame(in: .global).minY + 360 : 360
+					)
 			}
 			.frame(height: 360)
 
