@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49CBA832F34A35F07909E92E /* Pods_Gamee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389D0C15AAF593160F692DED /* Pods_Gamee.framework */; };
 		83820D4E26C825940053E888 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83820D4D26C825940053E888 /* ImageCache.swift */; };
 		83820D5126C8277B0053E888 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83820D5026C8277B0053E888 /* DetailView.swift */; };
 		83820D5326C833C70053E888 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83820D5226C833C70053E888 /* GameDetail.swift */; };
@@ -32,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BEA45F7D163EF37856C0290 /* Pods-Gamee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gamee.release.xcconfig"; path = "Target Support Files/Pods-Gamee/Pods-Gamee.release.xcconfig"; sourceTree = "<group>"; };
+		389D0C15AAF593160F692DED /* Pods_Gamee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gamee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		547ED48C976E6FA3EBBA2E85 /* Pods-Gamee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gamee.debug.xcconfig"; path = "Target Support Files/Pods-Gamee/Pods-Gamee.debug.xcconfig"; sourceTree = "<group>"; };
 		83820D4D26C825940053E888 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		83820D5026C8277B0053E888 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		83820D5226C833C70053E888 /* GameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49CBA832F34A35F07909E92E /* Pods_Gamee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,8 @@
 			children = (
 				83AAF38826C6ACF30024A08C /* Gamee */,
 				83AAF38726C6ACF30024A08C /* Products */,
+				B11E9C97D24617B1ABD1FD6A /* Pods */,
+				97D7309082EAC3378ADD8349 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,6 +218,24 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		97D7309082EAC3378ADD8349 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				389D0C15AAF593160F692DED /* Pods_Gamee.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B11E9C97D24617B1ABD1FD6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				547ED48C976E6FA3EBBA2E85 /* Pods-Gamee.debug.xcconfig */,
+				2BEA45F7D163EF37856C0290 /* Pods-Gamee.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,10 +243,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83AAF39526C6ACF40024A08C /* Build configuration list for PBXNativeTarget "Gamee" */;
 			buildPhases = (
+				C14447618046650246831AE0 /* [CP] Check Pods Manifest.lock */,
 				83AAF38226C6ACF30024A08C /* Sources */,
 				83AAF38326C6ACF30024A08C /* Frameworks */,
 				83AAF38426C6ACF30024A08C /* Resources */,
 				83AAF3E326C7BF0B0024A08C /* Run SwiftLint */,
+				D7A477AB6E906CD32DA1646A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -295,6 +322,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		C14447618046650246831AE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gamee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7A477AB6E906CD32DA1646A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gamee/Pods-Gamee-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gamee/Pods-Gamee-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gamee/Pods-Gamee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -446,6 +512,7 @@
 		};
 		83AAF39626C6ACF40024A08C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 547ED48C976E6FA3EBBA2E85 /* Pods-Gamee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -469,6 +536,7 @@
 		};
 		83AAF39726C6ACF40024A08C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BEA45F7D163EF37856C0290 /* Pods-Gamee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -23,7 +23,7 @@ extension Game {
 		let ratingBottom = String(format: "%.1f", rating)
 		return "\(ratingBottom) / \(ratingTop)"
 	}
-	
+
 	var releaseDate: String {
 		let dateHelper = DateHelper(
 			inputFormat: "yyyy-MM-dd",
