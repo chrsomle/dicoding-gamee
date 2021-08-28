@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct GameeApp: App {
+    let persistentStorage: CoreDataStorage = .shared
+
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environment(\.managedObjectContext, persistentStorage.container.viewContext)
         }
     }
 }
