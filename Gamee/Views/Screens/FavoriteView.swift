@@ -13,7 +13,19 @@ struct FavoriteView: View {
     var body: some View {
         NavigationView {
             Group {
-                if viewModel.games.isEmpty {
+                if viewModel.favorites.isEmpty {
+                    VStack {
+                        Image("EmptyFav")
+                            .resizable()
+                            .scaledToFit()
+
+                        Text("You favorite list is empty, go to Game List to see and add some!")
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.gray)
+                    }
+                    .padding(36)
+                    .opacity(0.6)
+                } else if viewModel.games.isEmpty {
                     ProgressView()
                 } else {
                     content

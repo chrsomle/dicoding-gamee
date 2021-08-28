@@ -27,6 +27,7 @@ struct DetailView: View {
 
 // MARK: View Builders
 extension DetailView {
+
 	@ViewBuilder
 	func content(game: GameDetail) -> some View {
 		ScrollView(.vertical, showsIndicators: false) {
@@ -43,34 +44,22 @@ extension DetailView {
 						width: UIScreen.main.bounds.width,
 						height: metrics.frame(in: .global).minY > 0 ? metrics.frame(in: .global).minY + 360 : 360
 					)
-			}
-			.frame(height: 360)
+			}.frame(height: 360)
 
 			VStack(alignment: .leading, spacing: 12) {
 				VStack(alignment: .leading, spacing: 4) {
-					Text(game.name)
-						.font(.title3.weight(.semibold))
-					Text("By \(game.publisherList)")
-						.foregroundColor(.accentColor)
-						.font(.subheadline)
+					Text(game.name).font(.title3.weight(.semibold))
+					Text("By \(game.publisherList)").foregroundColor(.accentColor).font(.subheadline)
 				}
-
 				Divider()
-
 				VStack(alignment: .leading, spacing: 4) {
 					sectionHeader(title: "Rating")
-					RatingView(rating: game.rating, ratingTop: game.ratingTop)
-						.foregroundColor(.accentColor)
+					RatingView(rating: game.rating, ratingTop: game.ratingTop).foregroundColor(.accentColor)
 				}
-
 				section(title: "Platforms", content: game.platformList)
-
 				section(title: "Genres", content: game.genreList)
-
 				section(title: "Released", content: game.releaseDate)
-
 				section(title: "Updated", content: game.latestUpdate)
-
 				section(title: "About", content: game.description)
 			}
 			.foregroundColor(AppColor.foreground)
@@ -108,4 +97,5 @@ extension DetailView {
 			.bold()
 			.foregroundColor(.secondary)
 	}
+
 }
