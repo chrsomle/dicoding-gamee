@@ -15,6 +15,12 @@ struct Game: Decodable, Identifiable {
     let name, released, backgroundImage: String
     let rating: Double
     let genres: [Genre]
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, released, rating, genres
+        case backgroundImage = "background_image"
+        case ratingTop = "rating_top"
+    }
 }
 
 extension Game {

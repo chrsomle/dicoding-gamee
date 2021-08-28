@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		49CBA832F34A35F07909E92E /* Pods_Gamee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389D0C15AAF593160F692DED /* Pods_Gamee.framework */; };
+		8311B2C326D91DC500AEC6FE /* NetwokingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8311B2C226D91DC500AEC6FE /* NetwokingHelper.swift */; };
 		83820D5126C8277B0053E888 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83820D5026C8277B0053E888 /* DetailView.swift */; };
 		83820D5326C833C70053E888 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83820D5226C833C70053E888 /* GameDetail.swift */; };
 		83820D5526C837780053E888 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83820D5426C837780053E888 /* Entity.swift */; };
@@ -33,6 +34,7 @@
 		2BEA45F7D163EF37856C0290 /* Pods-Gamee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gamee.release.xcconfig"; path = "Target Support Files/Pods-Gamee/Pods-Gamee.release.xcconfig"; sourceTree = "<group>"; };
 		389D0C15AAF593160F692DED /* Pods_Gamee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gamee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		547ED48C976E6FA3EBBA2E85 /* Pods-Gamee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gamee.debug.xcconfig"; path = "Target Support Files/Pods-Gamee/Pods-Gamee.debug.xcconfig"; sourceTree = "<group>"; };
+		8311B2C226D91DC500AEC6FE /* NetwokingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwokingHelper.swift; sourceTree = "<group>"; };
 		83820D5026C8277B0053E888 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		83820D5226C833C70053E888 /* GameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
 		83820D5426C837780053E888 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				83C628D826CB9736003F9770 /* DateHelper.swift */,
+				8311B2C226D91DC500AEC6FE /* NetwokingHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				83820D5726C837F20053E888 /* DetailViewModel.swift in Sources */,
 				83820D5926C83EBD0053E888 /* Platform.swift in Sources */,
 				83C628D926CB9736003F9770 /* DateHelper.swift in Sources */,
+				8311B2C326D91DC500AEC6FE /* NetwokingHelper.swift in Sources */,
 				83820D6326C850980053E888 /* RatingView.swift in Sources */,
 				83C628DC26CB9E19003F9770 /* APIResponse.swift in Sources */,
 			);
