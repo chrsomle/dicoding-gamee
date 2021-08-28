@@ -1,6 +1,9 @@
 excluded:
   - Pods
 
+function_body_length:
+  warning: 42
+
 # enables the usage of variable 'id'
 identifier_name:
   excluded: # excluded via string array
