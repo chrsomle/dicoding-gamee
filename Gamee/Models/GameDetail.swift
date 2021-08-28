@@ -10,8 +10,7 @@ import Foundation
 struct GameDetail: Decodable {
 	typealias Genre = Entity
 
-	let id: Int
-	let name, released, updated, backgroundImage: String
+	let name, released, backgroundImage: String
 	let rating: Double
 	let ratingTop: Int
 	let genres: [Genre]
@@ -20,7 +19,7 @@ struct GameDetail: Decodable {
 	let platforms: [Platform]
 
 	enum CodingKeys: String, CodingKey {
-		case id, name, released, updated, rating, genres, publishers
+		case name, released, rating, genres, publishers
 		case backgroundImage = "background_image"
 		case ratingTop = "rating_top"
 		case description = "description_raw"
