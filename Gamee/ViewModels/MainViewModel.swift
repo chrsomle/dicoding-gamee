@@ -6,14 +6,22 @@
 //
 
 import Foundation
+import CoreData
+import SwiftUI
 
-class MainViewModel: ObservableObject {
-	@Published var games = [Game]()
+final class MainViewModel: ObservableObject {
+    private let persistentStorage: CoreDataStorage = .shared
+
+    @Published var games = [Game]()
+	@Published var favorites = [Favorite]()
 
 	private let baseUrl = "https://api.rawg.io/api/games"
 
-	init() {
-		getGames()
+    static let shared = MainViewModel()
+
+	private init() {
+        getGames()
+        getFavorites()
 	}
 
 	func getGames() {
@@ -27,4 +35,13 @@ class MainViewModel: ObservableObject {
             }
         }
 	}
+
+    func getFavorites() {
+        let fetchRequest: NSFetchRequest<Favorite> = Favorite.fetchRequest()
+        do {
+            favorites = try persistentStorage.context.fetch(fetchRequest)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 }

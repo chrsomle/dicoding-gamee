@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		49CBA832F34A35F07909E92E /* Pods_Gamee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389D0C15AAF593160F692DED /* Pods_Gamee.framework */; };
 		8311B2C326D91DC500AEC6FE /* NetwokingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8311B2C226D91DC500AEC6FE /* NetwokingHelper.swift */; };
+		835CCAB626DA23D400439085 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835CCAB526DA23D400439085 /* FavoriteView.swift */; };
 		83820D5126C8277B0053E888 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83820D5026C8277B0053E888 /* DetailView.swift */; };
 		83820D5326C833C70053E888 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83820D5226C833C70053E888 /* GameDetail.swift */; };
 		83820D5526C837780053E888 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83820D5426C837780053E888 /* Entity.swift */; };
@@ -37,6 +38,7 @@
 		389D0C15AAF593160F692DED /* Pods_Gamee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gamee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		547ED48C976E6FA3EBBA2E85 /* Pods-Gamee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gamee.debug.xcconfig"; path = "Target Support Files/Pods-Gamee/Pods-Gamee.debug.xcconfig"; sourceTree = "<group>"; };
 		8311B2C226D91DC500AEC6FE /* NetwokingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwokingHelper.swift; sourceTree = "<group>"; };
+		835CCAB526DA23D400439085 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		83820D5026C8277B0053E888 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		83820D5226C833C70053E888 /* GameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
 		83820D5426C837780053E888 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				83AAF3FB26C7E21B0024A08C /* AboutView.swift */,
 				83AAF3E426C7C2650024A08C /* MainView.swift */,
 				83820D5026C8277B0053E888 /* DetailView.swift */,
+				835CCAB526DA23D400439085 /* FavoriteView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				83820D5326C833C70053E888 /* GameDetail.swift in Sources */,
 				83AAF3FC26C7E21B0024A08C /* AboutView.swift in Sources */,
 				83820D5126C8277B0053E888 /* DetailView.swift in Sources */,
+				835CCAB626DA23D400439085 /* FavoriteView.swift in Sources */,
 				83AAF3EF26C7D48F0024A08C /* AppColor.swift in Sources */,
 				83C6E01626DA008200F79875 /* Favorite.xcdatamodeld in Sources */,
 				83820D5526C837780053E888 /* Entity.swift in Sources */,

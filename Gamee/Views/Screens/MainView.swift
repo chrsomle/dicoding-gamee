@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-	@StateObject var viewModel = MainViewModel()
+    @ObservedObject var viewModel: MainViewModel = .shared
 
 	var body: some View {
 		NavigationView {
