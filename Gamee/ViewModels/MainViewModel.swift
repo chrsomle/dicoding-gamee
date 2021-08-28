@@ -13,6 +13,7 @@ final class MainViewModel: ObservableObject {
     private let persistentStorage: CoreDataStorage = .shared
 
     @Published var games = [Game]()
+
 	@Published var favorites = [Favorite]()
 
 	private let baseUrl = "https://api.rawg.io/api/games"

@@ -19,14 +19,7 @@ class GameRowModel: ObservableObject {
     init(game: Game) {
         self.game = game
 
-        let favoritesID = mainViewModel.favorites.map { Int($0.id) }
-
-        if favoritesID.contains(game.id) {
-            print("it contains \(game.name)")
-            isFavorite = true
-        } else {
-            print("nope \(game.name)")
-        }
+        refreshView()
     }
 
     func toggleFavorite() {
@@ -41,6 +34,16 @@ class GameRowModel: ObservableObject {
         } else {
             persistentStorage.add(id: game.id)
             isFavorite = true
+        }
+    }
+
+    func refreshView() {
+        let favoritesID = mainViewModel.favorites.map { Int($0.id) }
+
+        if favoritesID.contains(game.id) {
+            isFavorite = true
+        } else {
+            isFavorite = false
         }
     }
 }
@@ -118,6 +121,9 @@ struct GameRow: View {
 				.scaledToFill()
 		)
 		.cornerRadius(12)
+        .onAppear {
+            viewModel.refreshView()
+        }
 	}
 }
 
@@ -132,21 +138,3 @@ extension GameRow {
 			.cornerRadius(6)
 	}
 }
-//
-//struct GameRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        let game = Game(
-//            id: 1,
-//            ratingTop: 5,
-//            name: "Game Title", released: "2013-09-17",
-//            backgroundImage: "https://media.rawg.io/media/games/456/456dea5e1c7e3cd07060c14e96612001.jpg",
-//            rating: 4.67,
-//            genres: [
-//                Entity(id: 1, name: "Action"),
-//                Entity(id: 2, name: "Adventure"),
-//                Entity(id: 3, name: "Roleplay")
-//            ])
-//        GameRow(game: game)
-//            .previewLayout(.sizeThatFits)
-//    }
-//}

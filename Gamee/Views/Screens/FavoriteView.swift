@@ -19,7 +19,7 @@ struct FavoriteView: View {
                     content
                 }
             }
-            .navigationTitle("Game List")
+            .navigationTitle("Favorites")
             .toolbar {
                 NavigationLink(destination: AboutView()) {
                     Image(systemName: "info.circle")
@@ -29,9 +29,16 @@ struct FavoriteView: View {
     }
 
     private var content: some View {
-        ScrollView {
+        let favorites = viewModel.games.filter { game in
+            viewModel
+                .favorites
+                .map({ Int($0.id) })
+                .contains(game.id)
+        }
+
+        return ScrollView {
             LazyVStack {
-                ForEach(viewModel.games, id: \.id) { game in
+                ForEach(favorites, id: \.id) { game in
                     NavigationLink(
                         destination: DetailView(gameID: game.id)) {
                         GameRow(game: game)

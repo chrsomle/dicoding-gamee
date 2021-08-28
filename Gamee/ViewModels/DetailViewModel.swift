@@ -5,16 +5,33 @@
 //  Created by Christianto Budisaputra on 15/08/21.
 //
 
-import Foundation
+import SwiftUI
 
 class DetailViewModel: ObservableObject {
 	@Published var game: GameDetail?
 
+    private let persistentStorage: CoreDataStorage = .shared
+
+    @ObservedObject var mainViewModel: MainViewModel = .shared
+
 	private let baseUrl: String
+
+    @Published var isFavorite = false
+
+    let gameID: Int
 
 	init(gameID: Int) {
 		baseUrl = "https://api.rawg.io/api/games/\(gameID)"
-		getGameDetail()
+
+        self.gameID = gameID
+
+        getGameDetail()
+
+        let favoritesID = mainViewModel.favorites.map { Int($0.id) }
+
+        if favoritesID.contains(gameID) {
+            isFavorite = true
+        }
 	}
 
 	func getGameDetail() {
@@ -27,4 +44,19 @@ class DetailViewModel: ObservableObject {
             }
         }
 	}
+
+    func toggleFavorite() {
+        let favoritesID = mainViewModel.favorites.map { Int($0.id) }
+
+        if favoritesID.contains(gameID) {
+            let subject = mainViewModel.favorites.filter { favorite in
+                favorite.id == gameID
+            }
+            persistentStorage.remove(favorites: subject)
+            isFavorite = false
+        } else {
+            persistentStorage.add(id: gameID)
+            isFavorite = true
+        }
+    }
 }

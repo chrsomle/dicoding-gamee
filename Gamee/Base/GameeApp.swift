@@ -11,7 +11,18 @@ import SwiftUI
 struct GameeApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            TabView {
+                MainView()
+                    .tabItem {
+                        Image(systemName: "list.bullet.below.rectangle")
+                        Text("Game List")
+                    }
+                FavoriteView()
+                    .tabItem {
+                        Image(systemName: "heart.fill")
+                        Text("Favorites")
+                    }
+            }
         }
     }
 }

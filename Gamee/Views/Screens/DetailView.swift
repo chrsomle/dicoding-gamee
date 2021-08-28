@@ -81,7 +81,17 @@ extension DetailView {
 		}
 		.edgesIgnoringSafeArea(.all)
 		.background(AppColor.background.edgesIgnoringSafeArea(.all))
-		.navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitle("Detail", displayMode: .inline)
+        .toolbar {
+            Button {
+                viewModel.toggleFavorite()
+            } label: {
+                Image(systemName: viewModel.isFavorite ? "heart.fill" : "heart")
+                    .foregroundColor(.red)
+                    .font(.title3)
+                    .padding(6)
+            }
+        }
 	}
 
 	@ViewBuilder func section(title: String, content: String) -> some View {
