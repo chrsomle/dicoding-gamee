@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		49CBA832F34A35F07909E92E /* Pods_Gamee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389D0C15AAF593160F692DED /* Pods_Gamee.framework */; };
 		8311B2C326D91DC500AEC6FE /* NetwokingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8311B2C226D91DC500AEC6FE /* NetwokingHelper.swift */; };
+		83518E8C26E0938C004EF402 /* GameeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83518E8A26E0938C004EF402 /* GameeTests.swift */; };
+		83518E8D26E0938C004EF402 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83518E8B26E0938C004EF402 /* Info.plist */; };
 		835CCAB626DA23D400439085 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835CCAB526DA23D400439085 /* FavoriteView.swift */; };
 		83820D5126C8277B0053E888 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83820D5026C8277B0053E888 /* DetailView.swift */; };
 		83820D5326C833C70053E888 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83820D5226C833C70053E888 /* GameDetail.swift */; };
@@ -33,11 +35,24 @@
 		83C6E01626DA008200F79875 /* Favorite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83C6E01426DA008200F79875 /* Favorite.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		83518E8426E09345004EF402 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83AAF37E26C6ACF30024A08C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83AAF38526C6ACF30024A08C;
+			remoteInfo = Gamee;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2BEA45F7D163EF37856C0290 /* Pods-Gamee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gamee.release.xcconfig"; path = "Target Support Files/Pods-Gamee/Pods-Gamee.release.xcconfig"; sourceTree = "<group>"; };
 		389D0C15AAF593160F692DED /* Pods_Gamee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gamee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		547ED48C976E6FA3EBBA2E85 /* Pods-Gamee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gamee.debug.xcconfig"; path = "Target Support Files/Pods-Gamee/Pods-Gamee.debug.xcconfig"; sourceTree = "<group>"; };
 		8311B2C226D91DC500AEC6FE /* NetwokingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwokingHelper.swift; sourceTree = "<group>"; };
+		83518E7F26E09345004EF402 /* GameeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83518E8A26E0938C004EF402 /* GameeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameeTests.swift; sourceTree = "<group>"; };
+		83518E8B26E0938C004EF402 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		835CCAB526DA23D400439085 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		83820D5026C8277B0053E888 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		83820D5226C833C70053E888 /* GameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
@@ -65,6 +80,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		83518E7C26E09345004EF402 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83AAF38326C6ACF30024A08C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -76,9 +98,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83518E8926E0938C004EF402 /* GameeTests */ = {
+			isa = PBXGroup;
+			children = (
+				83518E8A26E0938C004EF402 /* GameeTests.swift */,
+				83518E8B26E0938C004EF402 /* Info.plist */,
+			);
+			path = GameeTests;
+			sourceTree = "<group>";
+		};
 		83AAF37D26C6ACF30024A08C = {
 			isa = PBXGroup;
 			children = (
+				83518E8926E0938C004EF402 /* GameeTests */,
 				83AAF38826C6ACF30024A08C /* Gamee */,
 				83AAF38726C6ACF30024A08C /* Products */,
 				B11E9C97D24617B1ABD1FD6A /* Pods */,
@@ -90,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				83AAF38626C6ACF30024A08C /* Gamee.app */,
+				83518E7F26E09345004EF402 /* GameeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,6 +274,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		83518E7E26E09345004EF402 /* GameeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83518E8626E09345004EF402 /* Build configuration list for PBXNativeTarget "GameeTests" */;
+			buildPhases = (
+				83518E7B26E09345004EF402 /* Sources */,
+				83518E7C26E09345004EF402 /* Frameworks */,
+				83518E7D26E09345004EF402 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83518E8526E09345004EF402 /* PBXTargetDependency */,
+			);
+			name = GameeTests;
+			productName = GameeTests;
+			productReference = 83518E7F26E09345004EF402 /* GameeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		83AAF38526C6ACF30024A08C /* Gamee */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83AAF39526C6ACF40024A08C /* Build configuration list for PBXNativeTarget "Gamee" */;
@@ -270,6 +321,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					83518E7E26E09345004EF402 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 83AAF38526C6ACF30024A08C;
+					};
 					83AAF38526C6ACF30024A08C = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -289,11 +344,20 @@
 			projectRoot = "";
 			targets = (
 				83AAF38526C6ACF30024A08C /* Gamee */,
+				83518E7E26E09345004EF402 /* GameeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		83518E7D26E09345004EF402 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83518E8D26E0938C004EF402 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83AAF38426C6ACF30024A08C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,6 +431,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		83518E7B26E09345004EF402 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83518E8C26E0938C004EF402 /* GameeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83AAF38226C6ACF30024A08C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -396,7 +468,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		83518E8526E09345004EF402 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83AAF38526C6ACF30024A08C /* Gamee */;
+			targetProxy = 83518E8426E09345004EF402 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		83518E8726E09345004EF402 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8KKWD6QU49;
+				INFOPLIST_FILE = GameeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.budisaputra.GameeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gamee.app/Gamee";
+			};
+			name = Debug;
+		};
+		83518E8826E09345004EF402 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8KKWD6QU49;
+				INFOPLIST_FILE = GameeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.budisaputra.GameeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gamee.app/Gamee";
+			};
+			name = Release;
+		};
 		83AAF39326C6ACF40024A08C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -564,6 +686,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		83518E8626E09345004EF402 /* Build configuration list for PBXNativeTarget "GameeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83518E8726E09345004EF402 /* Debug */,
+				83518E8826E09345004EF402 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		83AAF38126C6ACF30024A08C /* Build configuration list for PBXProject "Gamee" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

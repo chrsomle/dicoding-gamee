@@ -2,7 +2,7 @@ excluded:
   - Pods
 
 function_body_length:
-  warning: 42
+  warning: 43
 
 # enables the usage of variable 'id'
 identifier_name:
